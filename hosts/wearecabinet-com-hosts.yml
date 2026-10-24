@@ -1,0 +1,53 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 2
+  other_domain: 2
+  platform: 0
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.cabinethealth.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: cabinethealth.com
+  role: api
+  relation: other-domain
+- host: api.wearecabinet.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: wearecabinet.com
+  role: api
+  relation: own
+- host: cabinethealth.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: cabinethealth.com
+  role: other
+  relation: other-domain
+- host: wearecabinet.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: wearecabinet.com
+  role: website
+  relation: own

@@ -1,25 +1,69 @@
 aid: wearecabinet-com
+
 name: Cabinet Health
-description: 'Cabinet Health is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by techstars) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://framerusercontent.com/assets/dcYv1zy2dSIalhOsx5CMw9q0w.png
+
+description: 'Cabinet Health supplies private‑label over‑the‑counter (OTC) medicines, including tablets, softgels, capsules, liquids, powders, gummies and chewables, to retailers, manufacturers and wholesalers. It offers formulation, regulatory approval, sustainable packaging, and a distributed manufacturing network that aims to improve margin, omni‑channel growth, quality, reliability and sustainability goals. The company also provides a refillable patented medicine system and modern packaging solutions to reduce single‑use plastics.'
+
 url: https://raw.githubusercontent.com/api-evangelist/wearecabinet-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
-- Company
-apis: []
+- OTC medicines
+- Private label
+- Sustainable packaging
+- Retail supply chain
+- Manufacturing
+- Wholesale
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- techstars
+
 common:
+- type: Hosts
+  url: hosts/wearecabinet-com-hosts.yml
+- type: DomainSecurity
+  url: security/wearecabinet-com-domain-security.yml
 - type: Website
   url: https://wearecabinet.com/
+
+apis: []
+
+x-backed-by:
+- techstars
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://api.cabinethealth.com/mcp
+    status: 403
+  - url: https://wearecabinet.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
